@@ -15,6 +15,9 @@
     "email": "heroes@madewithlove.be"
   },
   "license": "MIT",
+  "dependencies": {
+    "immutable": "^3.7.6"
+  },
   "devDependencies": {
     "eslint": "^2.4.0",
     "eslint-config-madewithlove": "^2.1.4",
@@ -30,8 +33,5 @@
     "lint": "eslint src",
     "test": "mocha tests --recursive --compilers js:babel-core/register",
     "test:watch": "npm run test -- --watch"
-  },
-  "dependencies": {
-    "immutable": "^3.7.6"
   }
 }
