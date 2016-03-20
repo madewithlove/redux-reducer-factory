@@ -33,5 +33,6 @@
     "lint": "eslint src",
     "test": "mocha tests --recursive --compilers js:babel-core/register",
     "test:watch": "npm run test -- --watch"
-  }
+  },
+  "version": "0.1.0"
 }
