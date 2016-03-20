@@ -76,7 +76,7 @@ export default class ReducerFactory {
 
             // Look for a direct match
             if (this.handlers.hasOwnProperty(action.type)) {
-                return this.handlers[action.type](state, action);
+                return this.handlers[action.type](state, action, this.sanitizer);
             }
 
             return state;

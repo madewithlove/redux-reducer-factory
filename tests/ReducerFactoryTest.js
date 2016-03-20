@@ -51,4 +51,19 @@ describe('ReducerFactory', () => {
         expect(reducer(undefined, {...action, type: 'BAZ'})).toEqual('bar');
         expect(reducer(undefined, {...action, type: 'BAR'})).toBeA(Immutable.List);
     });
+
+    it('can sanitize the result of some actions', () => {
+        const action = {type: 'SET_USER', user: {}};
+        const reducer = factory
+            .setSanitizer(state => {
+                state = Immutable.fromJS(state);
+                state = state.set('foo', 'bar');
+
+                return state;
+            })
+            .setHandlers({SET_USER: (state, action, sanitizer) => sanitizer(action.user)})
+            .getReducer();
+
+        expect(reducer({}, action).toJS()).toEqual({foo: 'bar'});
+    });
 });
