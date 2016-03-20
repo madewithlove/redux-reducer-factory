@@ -1,0 +1,37 @@
+{
+  "name": "redux-reducer-factory",
+  "description": "A factory to more easily create reducers for Redux",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Anahkiasen/redux-reducer-factory.git"
+  },
+  "keywords": [
+    "redux",
+    "reducers"
+  ],
+  "author": {
+    "name": "Madewithlove",
+    "email": "heroes@madewithlove.be"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^2.4.0",
+    "eslint-config-madewithlove": "^2.1.4",
+    "expect": "^1.15.2",
+    "madewithlove-webpack-config": "^3.0.4",
+    "mocha": "^2.4.5",
+    "webpack": "^1.12.14"
+  },
+  "scripts": {
+    "build": "BABEL_ENV=production webpack --progress",
+    "prepublish": "npm run build",
+    "postversion": "git push; git push --tags; npm publish",
+    "lint": "eslint src",
+    "test": "mocha tests --recursive --compilers js:babel-core/register",
+    "test:watch": "npm run test -- --watch"
+  },
+  "dependencies": {
+    "immutable": "^3.7.6"
+  }
+}
