@@ -2,7 +2,7 @@
   "name": "redux-reducer-factory",
   "description": "A factory to more easily create reducers for Redux",
   "main": "dist/index.js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:Anahkiasen/redux-reducer-factory.git"
