@@ -2,6 +2,7 @@
   "name": "redux-reducer-factory",
   "description": "A factory to more easily create reducers for Redux",
   "main": "dist/index.js",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:Anahkiasen/redux-reducer-factory.git"
@@ -15,7 +16,7 @@
     "email": "heroes@madewithlove.be"
   },
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "immutable": "^3.7.6"
   },
   "devDependencies": {
@@ -33,6 +34,5 @@
     "lint": "eslint src",
     "test": "mocha tests --recursive --compilers js:babel-core/register",
     "test:watch": "npm run test -- --watch"
-  },
-  "version": "0.1.0"
+  }
 }
